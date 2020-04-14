@@ -3,9 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title>Gibbet</title>
 </head>
 <body>
+    
+    <header class="header">
+        <div>
+            <h1 class="title">Gibbed Game</h1>
+            <p class="subtitle">Don't do this at home!</p>
+        </div>
+        <span class="timer">00:00:00</span>
+    </header>
+
+    <main class="container">
+        <div class="half-container">
+            <p class="secret-sentence">_____</p>
+            <span class="lives"><i class="fas fa-heartbeat"></i></span>
+            <div class="img-wrap">
+                <img src="" alt="Game image.">
+            </div>
+        </div>
+        <div class="half-container"></div>
+    </main>
+
+    <section class="top-layer">
+        <div>
+            <label for="categories">Choose category</label>
+            <select>
+                <option value="movies">Movies</option>
+                <option value="cars">Cars</option>
+            </select>
+        </div>
+        <div>
+            <select>
+                <option value="easy">Easy</option>
+                <option value="medium">Medium</option>
+                <option value="hard">Hard</option>
+            </select>
+        </div>
+        <button class="btn-start">Start Game</button>
+    </section>
 
 <script src="bundle.js"></script></body>
 </html>
