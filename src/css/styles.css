@@ -2,7 +2,6 @@
     margin: 0;
     padding: 0;
 }
-
 body {
     font-family: sans-serif;
     color: #333;
@@ -25,11 +24,22 @@ body {
 }
 .timer {
     margin-top: 3rem;
+    text-decoration: underline;
+    text-decoration-color: rgb(173, 0, 0);
 }
 
 /*
 *   Main
 */
+.container {
+    padding: 0 1rem;
+    text-align: center;
+}
+.secret-sentence {
+    color: rgb(173, 0, 0);
+    font-size: 1.5rem;
+    letter-spacing: 5px;
+}
 
 
 /*

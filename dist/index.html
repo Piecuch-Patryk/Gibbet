@@ -9,7 +9,7 @@
     
     <header class="header">
         <div>
-            <h1 class="title">Gibbed Game</h1>
+            <h1 class="title">Gibbed Game!</h1>
             <p class="subtitle">Don't do this at home!</p>
         </div>
         <span class="timer">00:00:00</span>
@@ -20,29 +20,43 @@
             <p class="secret-sentence">_____</p>
             <span class="lives"><i class="fas fa-heartbeat"></i></span>
             <div class="img-wrap">
-                <img src="" alt="Game image.">
+                <img src="{img}" alt="Game image.">
             </div>
         </div>
         <div class="half-container"></div>
     </main>
 
     <section class="top-layer">
-        <div>
-            <label for="categories">Choose category</label>
-            <select>
-                <option value="movies">Movies</option>
-                <option value="cars">Cars</option>
-            </select>
+        <div class="layer-inner">
+            <h2 class="layer-title">Set up and PLAY!</h2>
+            <p class="layer-subtitle">The game generates secret password off chosen category. You have got to guess it, otherwise you will hung.</p>
+            <div class="options-wrap">
+                <label>
+                    <input type="radio" name="category" value="artists">
+                    Artists
+                </label>
+                <label>
+                    <input type="radio" name="category" value="movies" checked>
+                    Movies
+                </label>
+            </div>
+            <div class="options-wrap">
+                <label>
+                    <input type="radio" name="difficulty" value="easy" checked>
+                    Easy
+                </label>
+                <label>
+                    <input type="radio" name="difficulty" value="medium">
+                    Medium
+                </label>
+                <label>
+                    <input type="radio" name="difficulty" value="hard">
+                    Hard
+                </label>
+            </div>
+            <button class="btn-start">Start Game</button>
         </div>
-        <div>
-            <select>
-                <option value="easy">Easy</option>
-                <option value="medium">Medium</option>
-                <option value="hard">Hard</option>
-            </select>
-        </div>
-        <button class="btn-start">Start Game</button>
     </section>
-
+    
 <script src="bundle.js"></script></body>
 </html>
