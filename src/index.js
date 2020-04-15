@@ -1,2 +1,6 @@
 import './css/styles.css';
-import '@fortawesome/fontawesome-free/js/fontawesome';
+import InitGame from './js/initGame.js';
+import * as assets from './js/modules/assets.js';
+
+
+assets.DOMelements.btnStartGame.addEventListener('click', InitGame.init);

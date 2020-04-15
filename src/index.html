@@ -16,17 +16,19 @@
     </header>
 
     <main class="container">
-        <div class="half-container">
+        <div>
             <p class="secret-sentence">_____</p>
             <span class="lives"><i class="fas fa-heartbeat"></i></span>
             <div class="img-wrap">
-                <img src="{img}" alt="Game image.">
+                <img src="./assets/img/gibbet0.png" id="img" class="img" alt="Game image.">
             </div>
         </div>
-        <div class="half-container"></div>
+        <div>
+            <div class="keyboard"></div>
+        </div>
     </main>
 
-    <section class="top-layer">
+    <section id="top-layer" class="top-layer">
         <div class="layer-inner">
             <h2 class="layer-title">Set up and PLAY!</h2>
             <p class="layer-subtitle">The game generates secret password off chosen category. You have got to guess it, otherwise you will hung.</p>
@@ -54,7 +56,7 @@
                     Hard
                 </label>
             </div>
-            <button class="btn-start">Start Game</button>
+            <button id="btn-start" class="btn-start">Start Game</button>
         </div>
     </section>
     
