@@ -48,9 +48,27 @@ body {
 }
 
 /*
+*   Keyboard
+*/
+.keyboard {
+    padding: 2rem 0;
+}
+.btn-letter {
+    border: none;
+    background-color: rgb(105, 223, 231);
+    font-size: 1.5rem;
+    width: 30px;
+    height: 30px;
+    margin: 1px;
+}
+
+
+/*
 *   Top Layer
 */
 .top-layer {
+    display: none; /* TEMPORARY */
+
     position: absolute;
     top: 0;
     left: 0;
