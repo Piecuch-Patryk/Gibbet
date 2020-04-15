@@ -17,7 +17,7 @@
 
     <main class="container">
         <div>
-            <p class="secret-sentence">_____</p>
+            <p id="secret-sentence" class="secret-sentence">_____</p>
             <span class="lives"><i class="fas fa-heartbeat"></i></span>
             <div class="img-wrap">
                 <img src="./assets/img/gibbet0.png" id="img" class="img" alt="Game image.">
@@ -32,17 +32,17 @@
             <p class="layer-subtitle">The game generates secret password off chosen category. You have got to guess it, otherwise you will hung.</p>
             <div class="options-wrap">
                 <label>
-                    <input type="radio" name="category" value="artists">
-                    Artists
+                    <input type="radio" name="category" value="car">
+                    Cars
                 </label>
                 <label>
-                    <input type="radio" name="category" value="movies" checked>
+                    <input type="radio" name="category" value="movie" checked="checked">
                     Movies
                 </label>
             </div>
             <div class="options-wrap">
                 <label>
-                    <input type="radio" name="difficulty" value="easy" checked>
+                    <input type="radio" name="difficulty" value="easy">
                     Easy
                 </label>
                 <label>

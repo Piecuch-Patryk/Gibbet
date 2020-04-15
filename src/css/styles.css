@@ -67,7 +67,8 @@ body {
 *   Top Layer
 */
 .top-layer {
-    display: none; /* TEMPORARY */
+    /* TEMPORARY */
+    /* display: none;  */
 
     position: absolute;
     top: 0;

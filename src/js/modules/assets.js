@@ -3,6 +3,7 @@ const ID = {
     img: 'img',
     topLayer: 'top-layer',
     keyboard: 'keyboard-container',
+    secretSentence: 'secret-sentence',
 }
 
 export const classes = {
@@ -10,13 +11,20 @@ export const classes = {
     fadeOut: 'fade-out',
     btnLetter: 'btn-letter',
     keyboard: 'keyboard',
-} 
+}
+
+export const inputName = {
+    category: 'category',
+    difficulty: 'difficulty',
+}
 
 export const DOMelements = {
     btnStartGame: document.getElementById(ID.btnStart),
     img: document.getElementById(ID.img),
     topLayer: document.getElementById(ID.topLayer),
     keyboard: document.getElementById(ID.keyboard),
+    inputDifficulty: document.querySelector(`input[name=${inputName.difficulty}]:checked`),
+    secretSentence: document.getElementById(ID.secretSentence),
 }
 
 export const createEl = {
