@@ -25,6 +25,8 @@ export default class Game {
                     toggle.button(el);
                     category.updateSecretSentence(el);
                 }else {
+                    difficulty.decrementLives();
+
                     console.log(false);
                 }
                 

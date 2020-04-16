@@ -8,9 +8,15 @@ export default class Difficulty {
             medium: 4,
             hard: 2,
         };
+        this.lives = this.difficulLevels[this.difficulty];
     }
 
     setLives() {
-        assets.DOMelements.lives.innerText = this.difficulLevels[this.difficulty];
+        assets.DOMelements.lives.innerText = this.lives;
+    }
+
+    decrementLives() {
+        this.lives--;
+        this.setLives();
     }
 }
