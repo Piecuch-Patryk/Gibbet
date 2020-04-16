@@ -72,9 +72,8 @@ export default class Category {
             else letter = letter.toLowerCase();
             hiddenSecretSentence[el] = letter;
         });
-
+        
         assets.DOMelements.secretSentence.innerText = hiddenSecretSentence.join('');
-        console.log(hiddenSecretSentence.join(''));
     }
     
 }
