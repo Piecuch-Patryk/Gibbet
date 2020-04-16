@@ -7,7 +7,7 @@ export default class Category {
             movie: {
                 1: {
                     title: 'The Hunger Games',
-                    hint: 'Every year in the ruins of what was once North America, the nation of Panem forces each of its twelve districts to send a teenage boy and girl to compete in',
+                    hint: 'Every year in the ruins of what was once North America, the nation of Panem forces each of its twelve districts to send a teenage boy and girl to compete in...',
                 },
                 2: {
                     title: 'Idiocracy',
@@ -34,8 +34,10 @@ export default class Category {
     }
 
     set() {
-        const title = this.chosenCategory[this.random()].title.split('');
+        const chosen = this.chosenCategory[this.random()];
+        const title = chosen.title.split('');
         this.resetSecretSentence();
+        this.setHint(chosen)
 
         title.forEach(el => {
             let letter;
@@ -47,6 +49,10 @@ export default class Category {
 
     resetSecretSentence() {
         assets.DOMelements.secretSentence.innerHTML = '';
+    }
+
+    setHint(chosenObj) {
+        assets.DOMelements.hint.innerHTML = chosenObj.hint;
     }
 
 }

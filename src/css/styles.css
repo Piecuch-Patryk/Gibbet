@@ -32,6 +32,7 @@ body {
 *   Main
 */
 .container {
+    position: relative;
     text-align: center;
 }
 .secret-sentence {
@@ -45,6 +46,32 @@ body {
 }
 .img {
     width: 100%;
+}
+
+/* Lives left */
+.lives {
+    position: absolute;
+    top: 5rem;
+    left: 1rem;
+}
+.lives-left {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    font-size: 1.5rem;
+    font-weight: bold;
+    line-height: 4rem;
+}
+.lives .fa-heart {
+    font-size: 4rem;
+    color: rgba(255, 0, 0, .4);
+    z-index: -1;
+}
+
+/* Hint */
+.hint {
+    padding: 1rem 1rem 0;
 }
 
 /*

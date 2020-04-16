@@ -4,6 +4,7 @@ const ID = {
     topLayer: 'top-layer',
     keyboard: 'keyboard-container',
     secretSentence: 'secret-sentence',
+    hint: 'hint',
 }
 
 export const classes = {
@@ -25,6 +26,7 @@ export const DOMelements = {
     keyboard: document.getElementById(ID.keyboard),
     inputDifficulty: document.querySelector(`input[name=${inputName.difficulty}]:checked`),
     secretSentence: document.getElementById(ID.secretSentence),
+    hint: document.getElementById(ID.hint),
 }
 
 export const createEl = {
