@@ -20,14 +20,14 @@ export default class Game {
 
 
         Keyboard.getAll().forEach((el) => {
-            el.addEventListener('click', e => {
+            el.addEventListener('click', () => {
                 const isValid = Validate.isValid(el, category);
                 if(isValid){
                     toggle.button(el);
                     category.updateSecretSentence(el);
                 }else {
                     difficulty.decrementLives();
-                    image.set();
+                    image.change();
                 }
                 
             });
