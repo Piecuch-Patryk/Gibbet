@@ -2,15 +2,15 @@ import * as assets from './assets.js';
 
 export default class Difficulty {
     constructor() {
-        this.difficulty = assets.DOMelements.inputDifficulty.value;
+        this.difficulty = document.querySelector(`input[name=${assets.inputName.difficulty}]:checked`).value;
         this.difficulLevels = {
-            easy: 10,
-            medium: 8,
-            hard: 4,
+            easy: 8,
+            medium: 4,
+            hard: 2,
         };
     }
 
     setLives() {
-        //
+        assets.DOMelements.lives.innerText = this.difficulLevels[this.difficulty];
     }
 }
