@@ -14,3 +14,7 @@ export function topLayer() {
 export function button(element) {
     element.classList.add(assets.classes.btnSuccess);
 }
+
+export function lostLayer() {
+    //
+}

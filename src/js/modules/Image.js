@@ -3,18 +3,18 @@ import Difficulty from './Difficulty.js';
 
 export default class Image {
     constructor() {
-        this.imageNumber = 0;
-        this.numberImagesInFolder = 11;
+        this.number = 0;
+        this.imagesInFolder = 11;
     }
     set() {
-        assets.DOMelements.img.src = `../../assets/img/gibbet${this.imageNumber}.png`;
+        assets.DOMelements.img.src = `../../assets/img/gibbet${this.number}.png`;
     }
     change() {
         const difficulty = new Difficulty();
         const divider = difficulty.get();
-        const calculated = Math.floor(this.numberImagesInFolder / divider);
+        const calculated = Math.floor(this.imagesInFolder / divider);
 
-        this.imageNumber+=calculated;
+        this.number+=calculated;
         this.set();
     }
 }

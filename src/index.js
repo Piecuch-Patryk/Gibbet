@@ -9,5 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const Keys = new Keyboard();
     Keys.appendKeyboard();
 
-    assets.DOMelements.btnStartGame.addEventListener('click', InitGame.init);
+    const game = new InitGame();
+
+    assets.DOMelements.btnStartGame.addEventListener('click', () => game.init());
 });

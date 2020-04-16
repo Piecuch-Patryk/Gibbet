@@ -5,10 +5,12 @@ import Validate from './modules/Validate.js';
 import Keyboard from './modules/Keyboard.js';
 import Difficulty from './modules/Difficulty.js';
 
+const image = new Image();
 
 export default class Game {
-    static init(){
-        const image = new Image();
+    init(){
+        const self = this.self;
+
         image.set();
         toggle.topLayer();
 
@@ -28,11 +30,13 @@ export default class Game {
                 }else {
                     difficulty.decrementLives();
                     image.change();
+                    if(this.checkResult()) toggle.lostLayer();
                 }
-                
             });
         });
+    }
 
-
+    checkResult() {
+        return image.number >= image.imagesInFolder - 1;
     }
 }
