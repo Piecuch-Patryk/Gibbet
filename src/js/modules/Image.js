@@ -1,7 +1,11 @@
 import * as assets from './assets.js';
 
 export default class Image {
-    static set(number) {
-        assets.DOMelements.img.src = `../../assets/img/gibbet${number}.png`;
+    constructor() {
+        this.imageNumber = 0;
+    }
+    set() {
+        assets.DOMelements.img.src = `../../assets/img/gibbet${this.imageNumber}.png`;
+        this.imageNumber++;
     }
 }

@@ -8,7 +8,8 @@ import Difficulty from './modules/Difficulty.js';
 
 export default class Game {
     static init(){
-        Image.set(0);
+        const image = new Image();
+        image.set();
         toggle.topLayer();
 
         const category = new Category();
@@ -26,8 +27,7 @@ export default class Game {
                     category.updateSecretSentence(el);
                 }else {
                     difficulty.decrementLives();
-
-                    console.log(false);
+                    image.set();
                 }
                 
             });
