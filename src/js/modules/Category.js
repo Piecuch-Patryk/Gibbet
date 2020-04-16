@@ -67,12 +67,11 @@ export default class Category {
         });
 
         indexes.forEach((el, i) => {
-            console.log(el);
             if(el === 0) letter = letter.toUpperCase();
             else letter = letter.toLowerCase();
             hiddenSecretSentence[el] = letter;
         });
-        
+
         assets.DOMelements.secretSentence.innerText = hiddenSecretSentence.join('');
     }
     
