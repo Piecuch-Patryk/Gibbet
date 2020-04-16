@@ -1,6 +1,5 @@
 import * as assets from './assets.js';
 
-
 export default class Keyboard {
     constructor() {
         this.alphabet = 'QWERTYUIOPASDFGHJKLZXCVBNM'.split('');
@@ -13,6 +12,7 @@ export default class Keyboard {
             btn.innerText = el;
             buttons.push(btn);
         });
+        this.buttons = buttons;
         return buttons;
     }
     createKeyboard() {
@@ -35,5 +35,9 @@ export default class Keyboard {
     appendKeyboard() {
         this.createKeyboard();
         assets.DOMelements.keyboard.append(this.createKeyboard());
+    }
+    
+    static getAll() {
+        return document.querySelectorAll(`.${assets.classes.btnLetter}`);
     }
 }

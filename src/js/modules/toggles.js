@@ -10,3 +10,7 @@ export function topLayer() {
         el.addEventListener('transitionend', () => el.classList.add(assets.classes.isHidden));
     }
 }
+
+export function button(element) {
+    element.classList.add(assets.classes.btnSuccess);
+}

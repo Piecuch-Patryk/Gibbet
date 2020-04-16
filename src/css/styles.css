@@ -87,8 +87,13 @@ body {
     width: 30px;
     height: 30px;
     margin: 1px;
+    transition: all .3s ease;
 }
-
+.btn-success {
+    background-color: green;
+    color: #fff;
+    transform: scale(.9);
+}
 
 /*
 *   Top Layer

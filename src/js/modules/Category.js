@@ -36,6 +36,7 @@ export default class Category {
     set() {
         const chosen = this.chosenCategory[this.random()];
         const title = chosen.title.split('');
+        this.currentRandomEl = chosen;
         this.resetSecretSentence();
         this.setHint(chosen)
 
@@ -55,4 +56,25 @@ export default class Category {
         assets.DOMelements.hint.innerHTML = chosenObj.hint;
     }
 
+    updateSecretSentence(el) {
+        let letter = el.innerText.toLowerCase();
+        const secretSentence = this.currentRandomEl.title.toLowerCase().split('');
+        const hiddenSecretSentence = assets.DOMelements.secretSentence.innerText.split('');
+        const indexes = [];
+       
+        secretSentence.forEach((el, i) => {
+            if(el === letter) indexes.push(i);
+        });
+
+        indexes.forEach((el, i) => {
+            console.log(el);
+            if(el === 0) letter = letter.toUpperCase();
+            else letter = letter.toLowerCase();
+            hiddenSecretSentence[el] = letter;
+        });
+
+        assets.DOMelements.secretSentence.innerText = hiddenSecretSentence.join('');
+        console.log(hiddenSecretSentence.join(''));
+    }
+    
 }

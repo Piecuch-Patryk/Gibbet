@@ -12,6 +12,7 @@ export const classes = {
     fadeOut: 'fade-out',
     btnLetter: 'btn-letter',
     keyboard: 'keyboard',
+    btnSuccess: 'btn-success',
 }
 
 export const inputName = {
