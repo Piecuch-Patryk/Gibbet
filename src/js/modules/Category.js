@@ -26,6 +26,7 @@ export default class Category {
             },
         };
         this.chosenCategory = this.categories[this.category];
+        this.currentRandomEl = '';
     }
 
     random() {
@@ -73,6 +74,10 @@ export default class Category {
         });
 
         assets.DOMelements.secretSentence.innerText = hiddenSecretSentence.join('');
+    }
+
+    isGuessed() {
+        return assets.DOMelements.secretSentence.innerText.includes('_');
     }
     
 }

@@ -17,4 +17,7 @@ export default class Image {
         this.number+=calculated;
         this.set();
     }
+    getNumber() {
+        return this.number;
+    }
 }

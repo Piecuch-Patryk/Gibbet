@@ -6,6 +6,7 @@ const ID = {
     secretSentence: 'secret-sentence',
     hint: 'hint',
     lives: 'lives',
+    endLayer: 'end-layer',
 }
 
 export const classes = {
@@ -29,6 +30,7 @@ export const DOMelements = {
     secretSentence: document.getElementById(ID.secretSentence),
     hint: document.getElementById(ID.hint),
     lives: document.getElementById(ID.lives),
+    endLayer: document.getElementById(ID.endLayer),
 }
 
 export const createEl = {

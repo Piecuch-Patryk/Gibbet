@@ -9,8 +9,6 @@ const image = new Image();
 
 export default class Game {
     init(){
-        const self = this.self;
-
         image.set();
         toggle.topLayer();
 
@@ -20,23 +18,33 @@ export default class Game {
         const difficulty = new Difficulty();
         difficulty.setLives();
 
-
         Keyboard.getAll().forEach((el) => {
             el.addEventListener('click', () => {
                 const isValid = Validate.isValid(el, category);
                 if(isValid){
                     toggle.button(el);
                     category.updateSecretSentence(el);
+                    if(category.isGuessed()) this.gameWon();
                 }else {
                     difficulty.decrementLives();
                     image.change();
-                    if(this.checkResult()) toggle.lostLayer();
+                    if(this.checkResult()) this.gameLost();
                 }
             });
         });
     }
 
     checkResult() {
-        return image.number >= image.imagesInFolder - 1;
+        return image.getNumber() >= image.imagesInFolder - 1;
+    }
+
+    gameWon() {
+        //
+        toggle.winLayer();
+    }
+
+    gameLost() {
+        //
+        toggle.lostLayer();
     }
 }
