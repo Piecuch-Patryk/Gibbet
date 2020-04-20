@@ -101,8 +101,7 @@ body {
 */
 .top-layer {
     /* TEMPORARY */
-    /* display: none;  */
-
+    /* display: none; */
     position: absolute;
     top: 0;
     left: 0;
@@ -121,6 +120,7 @@ body {
     box-shadow: 0 0 1rem 0 #333;
 }
 .layer-title {
+    font-size: 2rem;
     padding: 3rem;
 }
 .layer-subtitle {
@@ -133,12 +133,43 @@ body {
     font-size: 1.4rem;
 }
 .btn-start {
-    border: none;
     background-color: rgb(135, 233, 126);
+}
+
+/*
+*   Game over layer
+*/
+.game-over-layer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.layer-inner.win-layer {
+    background-color: rgb(111, 250, 146);
+}
+.time-result {
+    display: block;
+    padding: 1rem;
+    font-size: 2rem;
+    text-decoration: underline;
+}
+.btn-reset {
+    background-color: rgb(53, 231, 53);
+    color: #333;
+}
+
+/*
+*   All layers
+*/
+.btn {
+    border: none;
     padding: .5rem 2rem;
     border-radius: 5px;
     margin: 2rem 0;
     font-size: 1.5rem;
+    box-shadow: inset 0 0 .2rem .1rem #333;
 }
 .is-hidden {
     display: none;

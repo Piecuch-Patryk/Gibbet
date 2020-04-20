@@ -15,10 +15,18 @@ export function button(element) {
     element.classList.add(assets.classes.btnSuccess);
 }
 
-export function winLayer() {
-    //
+export function gameOver(result) {
+    let DOMel;
+    if(result === 'win') DOMel = assets.DOMelements.winLayer;
+    else DOMel = assets.DOMelements.lostLayer;
+
+    DOMel.classList.add(assets.classes.fadeOut);
+    // DOMel.addEventListener('transitionend', () => )
+
+
+    DOMel.classList.add('visible');
 }
 
-export function lostLayer() {
-    //
-}
+// export function lostLayer() {
+//      assets.DOMelements.lostLayer.classList.add('visible');
+// }

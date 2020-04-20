@@ -6,7 +6,8 @@ const ID = {
     secretSentence: 'secret-sentence',
     hint: 'hint',
     lives: 'lives',
-    endLayer: 'end-layer',
+    winLayer: 'game-over-win',
+    lostLayer: 'game-over-lost',
 }
 
 export const classes = {
@@ -30,7 +31,8 @@ export const DOMelements = {
     secretSentence: document.getElementById(ID.secretSentence),
     hint: document.getElementById(ID.hint),
     lives: document.getElementById(ID.lives),
-    endLayer: document.getElementById(ID.endLayer),
+    winLayer: document.getElementById(ID.winLayer),
+    lostLayer: document.getElementById(ID.lostLayer),
 }
 
 export const createEl = {

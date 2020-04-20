@@ -39,10 +39,10 @@ export default class Game {
     }
 
     gameWon() {
-        toggle.winLayer();
+        toggle.gameOver('win');
     }
 
     gameLost() {
-        toggle.lostLayer();
+        toggle.gameOver('lost');
     }
 }
