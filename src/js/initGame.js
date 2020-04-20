@@ -45,4 +45,8 @@ export default class Game {
     gameLost() {
         toggle.gameOver('lost');
     }
+
+    reset() {
+        window.location.reload();
+    }
 }

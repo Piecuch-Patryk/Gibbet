@@ -16,6 +16,7 @@ export const classes = {
     btnLetter: 'btn-letter',
     keyboard: 'keyboard',
     btnSuccess: 'btn-success',
+    btnReset: 'btn-reset',
 }
 
 export const inputName = {
@@ -33,6 +34,7 @@ export const DOMelements = {
     lives: document.getElementById(ID.lives),
     winLayer: document.getElementById(ID.winLayer),
     lostLayer: document.getElementById(ID.lostLayer),
+    btnsReset: document.querySelectorAll(`.${classes.btnReset}`),
 }
 
 export const createEl = {
