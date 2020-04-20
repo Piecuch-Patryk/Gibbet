@@ -17,38 +17,40 @@
 
     <main class="container">
         <div>
-            <p class="secret-sentence">_____</p>
-            <span class="lives"><i class="fas fa-heartbeat"></i></span>
+            <p id="secret-sentence" class="secret-sentence">_____</p>
             <div class="img-wrap">
-                <img src="./assets/img/gibbet0.png" class="img" alt="Game image.">
+                <img src="./assets/img/gibbet0.png" id="img" class="img" alt="Game image.">
             </div>
         </div>
-        <div>
-            <div class="keyboard"></div>
-        </div>
+        <span class="lives">
+            <span id="lives" class="lives-left">10</span>
+            <i class="fas fa-heart"></i>
+        </span>
+        <p id="hint" class="hint"></p>
+        <div id="keyboard-container"></div>
     </main>
 
-    <section class="top-layer">
+    <section id="top-layer" class="top-layer">
         <div class="layer-inner">
             <h2 class="layer-title">Set up and PLAY!</h2>
             <p class="layer-subtitle">The game generates secret password off chosen category. You have got to guess it, otherwise you will hung.</p>
             <div class="options-wrap">
                 <label>
-                    <input type="radio" name="category" value="artists">
-                    Artists
+                    <input type="radio" name="category" value="car">
+                    Cars
                 </label>
                 <label>
-                    <input type="radio" name="category" value="movies" checked>
+                    <input type="radio" name="category" value="movie" checked="checked">
                     Movies
                 </label>
             </div>
             <div class="options-wrap">
                 <label>
-                    <input type="radio" name="difficulty" value="easy" checked>
+                    <input type="radio" name="difficulty" value="easy">
                     Easy
                 </label>
                 <label>
-                    <input type="radio" name="difficulty" value="medium">
+                    <input type="radio" name="difficulty" value="medium" checked="checked">
                     Medium
                 </label>
                 <label>
@@ -56,7 +58,7 @@
                     Hard
                 </label>
             </div>
-            <button class="btn-start">Start Game</button>
+            <button id="btn-start" class="btn-start">Start Game</button>
         </div>
     </section>
     
