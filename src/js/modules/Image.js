@@ -7,6 +7,7 @@ export default class Image {
         this.imagesInFolder = 11;
     }
     set() {
+        if(this.number >= this.imagesInFolder) return;
         assets.DOMelements.img.src = `./assets/img/gibbet${this.number}.png`;
     }
     change() {

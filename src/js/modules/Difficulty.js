@@ -17,6 +17,7 @@ export default class Difficulty {
     }
 
     decrementLives() {
+        if(this.lives <= 0) return;
         this.lives--;
         this.setLives();
     }
