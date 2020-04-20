@@ -8,6 +8,7 @@ const ID = {
     lives: 'lives',
     winLayer: 'game-over-win',
     lostLayer: 'game-over-lost',
+    timeResult: 'time-result',
 }
 
 export const classes = {
@@ -35,6 +36,7 @@ export const DOMelements = {
     winLayer: document.getElementById(ID.winLayer),
     lostLayer: document.getElementById(ID.lostLayer),
     btnsReset: document.querySelectorAll(`.${classes.btnReset}`),
+    timeResult: document.getElementById(ID.timeResult),
 }
 
 export const createEl = {

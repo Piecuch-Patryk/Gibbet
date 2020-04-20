@@ -4,13 +4,17 @@ import Category from './modules/Category.js';
 import Validate from './modules/Validate.js';
 import Keyboard from './modules/Keyboard.js';
 import Difficulty from './modules/Difficulty.js';
+import Timer from './modules/Timer.js';
 
 const image = new Image();
+const timer = new Timer();
 
 export default class Game {
     init(){
-        image.set();
         toggle.topLayer();
+        timer.start();
+        
+        image.set();
 
         const category = new Category();
         category.set();
@@ -24,11 +28,11 @@ export default class Game {
                 if(isValid){
                     toggle.button(el);
                     category.updateSecretSentence(el);
-                    if(!category.isGuessed()) this.gameWon();
+                    if(!category.isGuessed()) this.gameOver('win');
                 }else {
                     difficulty.decrementLives();
                     image.change();
-                    if(this.checkResult()) this.gameLost();
+                    if(this.checkResult()) this.gameOver('lost');
                 }
             });
         });
@@ -38,12 +42,14 @@ export default class Game {
         return image.getNumber() >= image.imagesInFolder - 1;
     }
 
-    gameWon() {
-        toggle.gameOver('win');
-    }
-
-    gameLost() {
-        toggle.gameOver('lost');
+    gameOver(result) {
+        timer.stop();
+        if(result === 'win') {
+            timer.showResult();
+            toggle.gameOver(result);
+        }else {
+            toggle.gameOver(result);
+        }
     }
 
     reset() {
