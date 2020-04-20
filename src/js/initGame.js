@@ -24,7 +24,7 @@ export default class Game {
                 if(isValid){
                     toggle.button(el);
                     category.updateSecretSentence(el);
-                    if(category.isGuessed()) this.gameWon();
+                    if(!category.isGuessed()) this.gameWon();
                 }else {
                     difficulty.decrementLives();
                     image.change();
