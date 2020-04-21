@@ -9,6 +9,7 @@ const ID = {
     winLayer: 'game-over-win',
     lostLayer: 'game-over-lost',
     timeResult: 'time-result',
+    container: 'container',
 }
 
 export const classes = {
@@ -18,6 +19,9 @@ export const classes = {
     keyboard: 'keyboard',
     btnSuccess: 'btn-success',
     btnReset: 'btn-reset',
+    heartAnimation: 'heart-animaiton',
+    livesWrap: 'lives',
+    imgAnimate: 'img-animate',
 }
 
 export const inputName = {
@@ -37,6 +41,8 @@ export const DOMelements = {
     lostLayer: document.getElementById(ID.lostLayer),
     btnsReset: document.querySelectorAll(`.${classes.btnReset}`),
     timeResult: document.getElementById(ID.timeResult),
+    livesWrap: document.querySelector(`.${classes.livesWrap}`),
+    container: document.getElementById(ID.container),
 }
 
 export const createEl = {

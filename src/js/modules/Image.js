@@ -5,10 +5,20 @@ export default class Image {
     constructor() {
         this.number = 0;
         this.imagesInFolder = 11;
+        this.imgEl = assets.DOMelements.img;
     }
     set() {
         if(this.number >= this.imagesInFolder) return;
-        assets.DOMelements.img.src = `./assets/img/gibbet${this.number}.png`;
+        
+        this.imgEl.classList.add(assets.classes.imgAnimate);
+        this.imgEl.addEventListener('transitionend', () => {
+
+
+            this.imgEl.src = `./assets/img/gibbet${this.number}.png`;
+            this.imgEl.classList.remove(assets.classes.imgAnimate);
+        });
+        
+
     }
     change() {
         const difficulty = new Difficulty();

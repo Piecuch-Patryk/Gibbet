@@ -5,6 +5,7 @@ export default class Timer {
         this.timeStart;
         this.timeEnd;
         this.timeResult;
+        this.blurTime = 200;
     }
 
     start() {
@@ -30,5 +31,9 @@ export default class Timer {
         time = time.split('.');
         const timeString = `${time[0]}m ${time[1]}s`;
         assets.DOMelements.timeResult.innerHTML = timeString;
+    }
+
+    blurBtn(el) {
+        setTimeout(() => el.blur(), this.blurTime);
     }
 }

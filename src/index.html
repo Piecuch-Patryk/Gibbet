@@ -14,7 +14,7 @@
         </div>
     </header>
 
-    <main class="container">
+    <main id="container" class="container">
         <div>
             <p id="secret-sentence" class="secret-sentence">_____</p>
             <div class="img-wrap">
@@ -34,27 +34,27 @@
             <h2 class="layer-title">Set up and PLAY!</h2>
             <p class="layer-subtitle">The game generates secret password off chosen category. You have got to guess it, otherwise you will hung.</p>
             <div class="options-wrap">
-                <label>
+                <label class="radio-label">
                     <input type="radio" name="category" value="car">
-                    Cars
+                    <span>Cars</span>
                 </label>
-                <label>
+                <label class="radio-label">
                     <input type="radio" name="category" value="movie" checked="checked">
-                    Movies
+                    <span>Movies</span>
                 </label>
             </div>
             <div class="options-wrap">
-                <label>
-                    <input type="radio" name="difficulty" value="easy">
-                    Easy
+                <label class="radio-label">
+                    <input type="radio" name="difficulty" value="easy" checked="checked">
+                    <span>Easy</span>
                 </label>
-                <label>
-                    <input type="radio" name="difficulty" value="medium" checked="checked">
-                    Medium
+                <label class="radio-label">
+                    <input type="radio" name="difficulty" value="medium">
+                    <span>Medium</span>
                 </label>
-                <label>
+                <label class="radio-label">
                     <input type="radio" name="difficulty" value="hard">
-                    Hard
+                    <span>Hard</span>
                 </label>
             </div>
             <button id="btn-start" class="btn btn-start">Start Game</button>
@@ -64,6 +64,7 @@
     <section id="game-over-lost" class="game-over-layer is-hidden">
         <div class="layer-inner">
             <h2 class="layer-title">Game Over!</h2>
+            <p><i class="far fa-sad-tear icon"></i></p>
             <p class="layer-subtitle">Don't give up so easy!</p>
             <button class="btn btn-reset">Try again</button>
         </div>

@@ -26,10 +26,12 @@ export default class Game {
             el.addEventListener('click', () => {
                 const isValid = Validate.isValid(el, category);
                 if(isValid){
+                    timer.blurBtn(el);
                     toggle.button(el);
                     category.updateSecretSentence(el);
                     if(!category.isGuessed()) this.gameOver('win');
                 }else {
+                    timer.blurBtn(el);
                     difficulty.decrementLives();
                     image.change();
                     if(this.checkResult()) this.gameOver('lost');

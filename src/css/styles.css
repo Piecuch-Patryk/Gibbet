@@ -46,6 +46,10 @@ body {
 }
 .img {
     width: 100%;
+    transition: all .2s linear;
+}
+.img-animate {
+    transform: scale(1.05);
 }
 
 /* Lives left */
@@ -62,11 +66,15 @@ body {
     font-size: 1.5rem;
     font-weight: bold;
     line-height: 4rem;
+    color: #fff;
 }
 .lives .fa-heart {
     font-size: 4rem;
-    color: rgba(255, 0, 0, .4);
+    color: rgba(255, 0, 0, .8);
     z-index: -1;
+}
+.heart-animaiton {
+    animation: heartFadeOut .5s linear forwards;
 }
 
 /* Hint */
@@ -90,6 +98,11 @@ body {
     border-radius: 5px;
     transition: all .3s ease;
 }
+.btn-letter:focus {
+    background-color: rgb(0, 160, 172);
+    outline: none;
+    animation: btnFocus .3s linear;
+}
 .btn-success {
     background-color: green;
     color: #fff;
@@ -107,6 +120,10 @@ body {
     left: 0;
     width: 100%;
     height: 100vh;
+    background-image: url(/assets/img/gibbet10.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
     transition: all .3s ease-in;
 }
 .layer-inner {
@@ -115,9 +132,9 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     width: 90%;
-    background-color: rgb(248, 117, 117);
+    background-color: rgb(255, 255, 255, .9);
     text-align: center;
-    box-shadow: 0 0 1rem 0 #333;
+    box-shadow: inset 0 0 .5rem 0 #333;
 }
 .layer-title {
     font-size: 2rem;
@@ -127,13 +144,41 @@ body {
     padding-bottom: 2rem;
 }
 .options-wrap {
+    position: relative;
     display: flex;
     justify-content: space-around;
     padding: 1rem 3rem;
     font-size: 1.4rem;
 }
+.options-wrap::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 75%;
+    transform: translateX(-50%);
+    border-bottom: 1px solid #333;
+}
+.radio-label > input[type="radio"] {
+    display: none;
+}
+.radio-label > span {
+    padding: 0 .5rem;
+    border: 3px solid transparent;
+    border-radius: .2rem;
+    transition: all .5s ease;
+}
+.radio-label > input:checked + span {
+    border-color: rgb(135, 233, 126);
+}
 .btn-start {
     background-color: rgb(135, 233, 126);
+    transition: all .5s ease;
+}
+.btn-start:focus {
+    background-color: rgb(15, 165, 1);
+    outline: none;
+    animation: btnFocus .3s linear;
 }
 
 /*
@@ -157,6 +202,10 @@ body {
     font-size: 2rem;
     text-decoration: underline;
 }
+.icon {
+    font-size: 3rem;
+    padding: 0 0 1rem;
+}
 .btn-reset {
     background-color: rgb(53, 231, 53);
     color: #333;
@@ -178,4 +227,32 @@ body {
 }
 .fade-out {
     opacity: 0;
+}
+
+/*
+*   Keyframes
+*/
+@keyframes heartFadeOut {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        transform: scale(1.5);
+    }
+}
+
+@keyframes btnFocus {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
 }
