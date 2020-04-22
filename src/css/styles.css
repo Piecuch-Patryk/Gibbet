@@ -49,7 +49,8 @@ body {
     transition: all .2s linear;
 }
 .img-animate {
-    transform: scale(1.05);
+    transform: scale(.95);
+    opacity: .5;
 }
 
 /* Lives left */
@@ -104,9 +105,8 @@ body {
     animation: btnFocus .3s linear;
 }
 .btn-success {
-    background-color: green;
-    color: #fff;
-    transform: scale(.7);
+    background-color: rgb(135, 233, 126);
+    transform: scale(.8);
 }
 
 /*
@@ -247,7 +247,7 @@ body {
         transform: scale(1);
     }
     50% {
-        transform: scale(1.1);
+        transform: scale(.8);
     }
     100% {
         transform: scale(1);

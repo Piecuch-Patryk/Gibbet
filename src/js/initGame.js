@@ -26,7 +26,8 @@ export default class Game {
             el.addEventListener('click', () => {
                 const isValid = Validate.isValid(el, category);
                 if(isValid){
-                    timer.blurBtn(el);
+                    // timer.blurBtn(el);
+                    el.blur();
                     toggle.button(el);
                     category.updateSecretSentence(el);
                     if(!category.isGuessed()) this.gameOver('win');
@@ -46,12 +47,12 @@ export default class Game {
 
     gameOver(result) {
         timer.stop();
-        if(result === 'win') {
-            timer.showResult();
-            toggle.gameOver(result);
-        }else {
-            toggle.gameOver(result);
-        }
+        setTimeout(() => {
+            if(result === 'win') {
+                timer.showResult();
+                toggle.gameOver(result);
+            }else toggle.gameOver(result);
+        }, timer.blurTime + 200);
     }
 
     reset() {
