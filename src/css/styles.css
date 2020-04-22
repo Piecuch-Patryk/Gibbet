@@ -110,6 +110,24 @@ body {
 }
 
 /*
+*   All layers
+*/
+.btn {
+    border: none;
+    padding: .5rem 2rem;
+    border-radius: 5px;
+    margin: 2rem 0;
+    font-size: 1.5rem;
+    box-shadow: inset 0 0 .2rem .1rem #333;
+}
+.is-hidden {
+    display: none;
+}
+.fade-out {
+    opacity: 0;
+}
+
+/*
 *   Top Layer
 */
 .top-layer {
@@ -144,7 +162,7 @@ body {
     padding: 1rem 3rem;
     font-size: 1.4rem;
 }
-.options-wrap::after {
+.options-wrap:nth-of-type(1)::after {
     content: '';
     position: absolute;
     bottom: 0;
@@ -157,8 +175,8 @@ body {
     display: none;
 }
 .radio-label > span {
-    padding: 0 .5rem;
-    border: 3px solid transparent;
+    padding: 0 .5rem 0 0;
+    border-left: 10px solid transparent;
     border-radius: .2rem;
     transition: all .5s ease;
 }
@@ -166,7 +184,10 @@ body {
     border-color: rgb(135, 233, 126);
 }
 .btn-start {
-    background-color: rgb(135, 233, 126);
+    background: none;
+    box-shadow: none;
+    border: 3px solid rgb(135, 233, 126);
+    padding: .2rem 1rem;
     transition: all .5s ease;
 }
 .btn-start:focus {
@@ -203,24 +224,6 @@ body {
 .btn-reset {
     background-color: rgb(53, 231, 53);
     color: #333;
-}
-
-/*
-*   All layers
-*/
-.btn {
-    border: none;
-    padding: .5rem 2rem;
-    border-radius: 5px;
-    margin: 2rem 0;
-    font-size: 1.5rem;
-    box-shadow: inset 0 0 .2rem .1rem #333;
-}
-.is-hidden {
-    display: none;
-}
-.fade-out {
-    opacity: 0;
 }
 
 /*
