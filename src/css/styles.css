@@ -36,9 +36,13 @@ body {
     text-align: center;
 }
 .secret-sentence {
+    position: sticky;
+    top: 0;
+    background-color: #fff;
     color: rgb(173, 0, 0);
     font-size: 1.5rem;
     letter-spacing: 5px;
+    z-index: 8;
 }
 .img-wrap {
     width: 60%;
@@ -55,9 +59,10 @@ body {
 
 /* Lives left */
 .lives {
-    position: absolute;
+    position: fixed;
     top: 5rem;
     left: 1rem;
+    z-index: 8;
 }
 .lives-left {
     position: absolute;
@@ -137,6 +142,7 @@ body {
     width: 100%;
     height: 100vh;
     transition: all .3s ease-in;
+    z-index: 9;
 }
 .layer-inner {
     position: absolute;
@@ -207,6 +213,7 @@ body {
     height: 100%;
     opacity: 1;
     transition: all .5s ease-in;
+    z-index: 7;
 }
 .layer-inner.win-layer {
     background-color: rgb(111, 250, 146);
