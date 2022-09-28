@@ -11,7 +11,7 @@ export default class Category {
                 },
                 2: {
                     title: 'Idiocracy',
-                    hint: 'To test its top-secret Human Hibernation Project, the Pentagon picks the most average Americans it can find - an Army private and a prostitute - and sends them to the year 2505',
+                    hint: 'Top-secret Human Hibernation Project. Pentagon picks the most average Americans they can find - private soldier and a prostitute and send them to the year 2505',
                 }
             },
             car: {
