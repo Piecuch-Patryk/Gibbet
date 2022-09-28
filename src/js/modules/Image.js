@@ -7,7 +7,7 @@ export default class Image {
         this.imagesInFolder = 11;
     }
     set() {
-        assets.DOMelements.img.src = `../../assets/img/gibbet${this.number}.png`;
+        assets.DOMelements.img.src = `./assets/img/gibbet${this.number}.png`;
     }
     change() {
         const difficulty = new Difficulty();
